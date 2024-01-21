@@ -7,13 +7,24 @@ font-family: Arial;
 .title{
   margin:0px;
   background-color: #72c7e4;
-  ;
+  animation: spin 2s 1 linear;
 }
 
 .colorchange {
   font-family: Arial;
   font-size: 3em;
   animation: color-change 1.5s infinite;
+}
+
+@keyframes spin{
+  from {
+  rotate: 0; 
+  scale: 0.1;
+  }
+  to {
+  rotate: 359deg; 
+  scale: 1;  
+  }
 }
 
 @keyframes color-change {
@@ -66,20 +77,6 @@ button:hover{
   animation-duration: 2.5s;
   animation-fill-mode: forwards;
   visibility: hidden;
-}
-
-.boom{
-  background-image: url('boom-bomb.gif');
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  visibility: visible;
-  animation-name: boom;
-  animation-delay: -0.3;
-  animation-duration: 1.7s;
-  animation-fill-mode: forward;
 }
 
 body{
